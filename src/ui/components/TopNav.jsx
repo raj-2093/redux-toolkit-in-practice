@@ -8,11 +8,20 @@ export default function TopNav() {
   return (
     <nav className="bg-yellow-200 p-2">
       <div className="header-wrapper flex justify-between">
-        <div className="logo">
-          <h1 className="text-3xl font-bold">Redux Store</h1>
+        <div className="logo w-[20%]">
+          <Link to={"/"}>
+            <h1 className="text-3xl font-bold">ReduxStore</h1>
+          </Link>
         </div>
-        <div className="links">
-          <div className="page-links"></div>
+        <div className="links flex justify-between items-center w-[80%]">
+          <div className="page-links flex items-center gap-3 justify-center">
+            <Link to={"/products"} className="rounded bg-rose-400 p-2">
+              Products
+            </Link>
+            <Link to={"/admin-panel"} className="rounded bg-rose-400 p-2">
+              Admin Panel
+            </Link>
+          </div>
           <div className="profile-links">
             <Link
               to={location.pathname.includes("cart") ? "/" : "/cart"}
